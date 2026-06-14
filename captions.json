@@ -1,0 +1,106 @@
+{
+  "lego": {
+    "IMG_8737": {
+      "title": "Custom LEGO Creation",
+      "description": "An original LEGO build designed entirely without instructions."
+    },
+    "IMG_8738": {
+      "title": "LEGO Ferrari Model",
+      "description": "Detailed replica of a Ferrari, built from scratch with custom design choices."
+    },
+    "IMG_8739": {
+      "title": "LEGO Architecture",
+      "description": "Structural LEGO build showcasing spatial planning and design."
+    },
+    "IMG_8741": {
+      "title": "LEGO Engineering Build",
+      "description": "Complex LEGO assembly demonstrating mechanical understanding."
+    },
+    "IMG_8742": {
+      "title": "Internal Engine Model",
+      "description": "Working motion model that demonstrates how an internal combustion engine operates."
+    },
+    "IMG_8755": {
+      "title": "LEGO Original Design",
+      "description": "One of hundreds of original LEGO designs created without instructions."
+    }
+  },
+  "sketches": {
+    "IMG_8406": {
+      "title": "Original Sketch",
+      "description": "Freehand drawing showcasing creative vision and artistic skill."
+    },
+    "IMG_8776": {
+      "title": "Pencil Study",
+      "description": "Detailed pencil sketch exploring form, shading, and composition."
+    },
+    "IMG_8778": {
+      "title": "Creative Illustration",
+      "description": "Original illustration drawn from imagination."
+    },
+    "IMG_8781": {
+      "title": "Sketch Study",
+      "description": "Observational drawing practice capturing detail and perspective."
+    },
+    "IMG_8783": {
+      "title": "Artistic Rendering",
+      "description": "A freehand rendering exploring line work and artistic expression."
+    }
+  },
+  "rubiks": {
+    "IMG_8754": {
+      "title": "Rubik's Cube — 17.7s Record",
+      "description": "Midwest Cubing Association recognized solve. Trains daily to improve speed and consistency."
+    }
+  },
+  "woodwork": {
+    "IMG_8725": {
+      "title": "Woodworking Project",
+      "description": "Handcrafted wood piece built with precision measurement and planning."
+    },
+    "IMG_8726": {
+      "title": "Workshop Build",
+      "description": "Detail shot of a woodworking build — precise cuts and clean joinery."
+    },
+    "IMG_8730": {
+      "title": "Side Table — Build Process",
+      "description": "Designing and assembling the wooden side table with working drawers from scratch."
+    },
+    "IMG_8734": {
+      "title": "Wood Finishing",
+      "description": "Applying finishing techniques to achieve a professional surface result."
+    },
+    "IMG_8735": {
+      "title": "Completed Side Table",
+      "description": "The finished wooden side table with working drawers, built entirely from scratch."
+    },
+    "IMG_8767": {
+      "title": "Metalworking — Welding Setup",
+      "description": "Learning safe tool handling and structural assembly during metal fabrication."
+    },
+    "IMG_8768": {
+      "title": "Welding in Progress",
+      "description": "Fabricating the wall-mountable metal side table using welding techniques."
+    },
+    "IMG_8770": {
+      "title": "Metal Fabrication Detail",
+      "description": "Close-up of welded joints on the metal side table project."
+    },
+    "IMG_8771": {
+      "title": "Metal Table Assembly",
+      "description": "Structural assembly of the welded metal wall-mount side table."
+    },
+    "IMG_8772": {
+      "title": "Metalwork Progress",
+      "description": "Mid-build view of the metal side table taking shape."
+    },
+    "IMG_8773": {
+      "title": "Completed Metal Table",
+      "description": "Finished wall-mountable metal side table — fabricated and welded from raw material."
+    },
+    "IMG_8775": {
+      "title": "Craft & Build",
+      "description": "Showcasing the quality and craftsmanship of a completed build project."
+    }
+  }
+}

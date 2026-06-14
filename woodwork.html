@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wood Crafting &amp; Welding — Vibhav Lal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">VL</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#achievements">Achievements</a></li>
+        <li><a href="index.html#creations">Creations</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="gallery-page-hero">
+    <div class="container">
+      <a href="index.html#creations" class="back-link">← Back to Creations</a>
+      <span class="hero-icon">🪵</span>
+      <h1>Wood Crafting &amp; Welding</h1>
+      <p>Built a wooden side table with drawers from scratch and fabricated a wall-mount metal table — precision tools, patience, and craftsmanship.</p>
+    </div>
+  </div>
+
+  <section style="padding: 60px 0 96px;">
+    <div class="container">
+      <p class="section-sub">Hover over any photo to learn more</p>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Vibhav Lal &nbsp;·&nbsp; Eden Prairie, MN</p>
+  </footer>
+
+  <script>
+    const IMAGES = ["IMG_8725","IMG_8726","IMG_8730","IMG_8734","IMG_8735","IMG_8767","IMG_8768","IMG_8770","IMG_8771","IMG_8772","IMG_8773","IMG_8775"];
+    const CATEGORY = "woodwork";
+    async function init() {
+      let captions = {};
+      try { captions = (await (await fetch("captions.json")).json())[CATEGORY] || {}; } catch(e) {}
+      const grid = document.getElementById("gallery-grid");
+      IMAGES.forEach(f => {
+        const cap = captions[f] || {};
+        const el = document.createElement("div");
+        el.className = "gallery-item";
+        el.innerHTML = `
+          <img src="images/${CATEGORY}/${f}.jpg" alt="${cap.title || f}" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>${cap.title || f}</h4>
+            ${cap.description ? `<p>${cap.description}</p>` : ""}
+          </div>`;
+        grid.appendChild(el);
+      });
+    }
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>

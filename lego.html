@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEGO — Vibhav Lal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">VL</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#achievements">Achievements</a></li>
+        <li><a href="index.html#creations">Creations</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="gallery-page-hero">
+    <div class="container">
+      <a href="index.html#creations" class="back-link">← Back to Creations</a>
+      <span class="hero-icon">🧱</span>
+      <h1>LEGO</h1>
+      <p>Hundreds of original designs built without instructions — from complex vehicles to working mechanical models.</p>
+    </div>
+  </div>
+
+  <section style="padding: 60px 0 96px;">
+    <div class="container">
+      <p class="section-sub">Hover over any photo to learn more</p>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Vibhav Lal &nbsp;·&nbsp; Eden Prairie, MN</p>
+  </footer>
+
+  <script>
+    const IMAGES = ["IMG_8737","IMG_8738","IMG_8739","IMG_8741","IMG_8742","IMG_8755"];
+    const CATEGORY = "lego";
+    async function init() {
+      let captions = {};
+      try { captions = (await (await fetch("captions.json")).json())[CATEGORY] || {}; } catch(e) {}
+      const grid = document.getElementById("gallery-grid");
+      IMAGES.forEach(f => {
+        const cap = captions[f] || {};
+        const el = document.createElement("div");
+        el.className = "gallery-item";
+        el.innerHTML = `
+          <img src="images/${CATEGORY}/${f}.jpg" alt="${cap.title || f}" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4>${cap.title || f}</h4>
+            ${cap.description ? `<p>${cap.description}</p>` : ""}
+          </div>`;
+        grid.appendChild(el);
+      });
+    }
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>
