@@ -47,10 +47,10 @@ def csv_to_json():
             sys.exit(1)
 
         for row_num, row in enumerate(reader, start=2):
-            category    = row.get("category", "").strip().lower()
-            filename    = row.get("filename", "").strip()
-            title       = row.get("title", "").strip()
-            description = row.get("description", "").strip()
+            category    = (row.get("category")    or "").strip().lower()
+            filename    = (row.get("filename")    or "").strip()
+            title       = (row.get("title")       or "").strip()
+            description = (row.get("description") or "").strip()
 
             if not category and not filename:
                 continue  # blank row
