@@ -1,28 +1,8 @@
 {
-  "lego": {
-    "IMG_8737": {
-      "title": "Garage lift and flooring created using LEGO.",
-      "description": ""
-    },
-    "IMG_8738": {
-      "title": "Garage lift and flooring created using LEGO.",
-      "description": ""
-    },
-    "IMG_8739": {
-      "title": "Garage lift and flooring created using LEGO.",
-      "description": ""
-    },
-    "IMG_8741": {
-      "title": "Garage lift and flooring created using LEGO.",
-      "description": ""
-    },
-    "IMG_8742": {
-      "title": "Internal Engine Model",
-      "description": "Working motion model that demonstrates how an internal combustion engine operates. Created using LEGO kit."
-    },
-    "IMG_8755": {
-      "title": "LEGO Porsche inspired car creation using random LEGO pieces.",
-      "description": ""
+  "rubiks": {
+    "IMG_8754": {
+      "title": "Rubik's Cube — 17.7s Record",
+      "description": "Midwest Cubing Association recognized solve. Trains daily to improve speed and consistency."
     }
   },
   "sketches": {
@@ -45,12 +25,6 @@
     "IMG_8783": {
       "title": "Artistic Rendering",
       "description": "A freehand rendering exploring line work and artistic expression."
-    }
-  },
-  "rubiks": {
-    "IMG_8754": {
-      "title": "Rubik's Cube — 17.7s Record",
-      "description": "Midwest Cubing Association recognized solve. Trains daily to improve speed and consistency."
     }
   },
   "woodwork": {
@@ -101,6 +75,32 @@
     "IMG_8775": {
       "title": "Craft & Build",
       "description": "Showcasing the quality and craftsmanship of a completed build project."
+    }
+  },
+  "lego": {
+    "IMG_8737": {
+      "title": "LEGO creation",
+      "description": "Garage lift and flooring created using LEGO."
+    },
+    "IMG_8738": {
+      "title": "LEGO creation",
+      "description": "Garage lift and flooring created using LEGO."
+    },
+    "IMG_8739": {
+      "title": "LEGO creation",
+      "description": "Garage lift and flooring created using LEGO."
+    },
+    "IMG_8741": {
+      "title": "LEGO creation",
+      "description": "Garage lift and flooring created using LEGO."
+    },
+    "IMG_8742": {
+      "title": "LEGO creation",
+      "description": "Internal Engine Model"
+    },
+    "IMG_8755": {
+      "title": "LEGO creation",
+      "description": "LEGO Porsche inspired car creation using random LEGO pieces."
     }
   }
 }
