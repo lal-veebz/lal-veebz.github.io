@@ -29,10 +29,21 @@
     </div>
   </div>
 
-  <section style="padding: 60px 0 96px;">
+  <!-- PHOTOS -->
+  <section style="padding: 60px 0 48px;">
     <div class="container">
+      <h2 class="section-title">Photos</h2>
       <p class="section-sub">Hover over any photo to learn more</p>
       <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section style="padding: 48px 0 96px; background: var(--bg2);">
+    <div class="container">
+      <h2 class="section-title">Videos</h2>
+      <p class="section-sub">Watch the builds in action</p>
+      <div class="video-grid" id="video-grid"></div>
     </div>
   </section>
 
@@ -42,10 +53,14 @@
 
   <script>
     const IMAGES = ["IMG_8737","IMG_8738","IMG_8739","IMG_8741","IMG_8742","IMG_8755"];
+    const VIDEOS = ["IMG_8743","IMG_8744","IMG_8745","IMG_8748","IMG_8752"];
     const CATEGORY = "lego";
+
     async function init() {
       let captions = {};
       try { captions = (await (await fetch("captions.json")).json())[CATEGORY] || {}; } catch(e) {}
+
+      // Photos
       const grid = document.getElementById("gallery-grid");
       IMAGES.forEach(f => {
         const cap = captions[f] || {};
@@ -59,7 +74,27 @@
           </div>`;
         grid.appendChild(el);
       });
+
+      // Videos
+      const vgrid = document.getElementById("video-grid");
+      VIDEOS.forEach(f => {
+        const cap = captions[f] || {};
+        const el = document.createElement("div");
+        el.className = "video-item";
+        el.innerHTML = `
+          <video controls playsinline preload="metadata">
+            <source src="videos/${CATEGORY}/${f}.MOV" type="video/quicktime" />
+            <source src="videos/${CATEGORY}/${f}.MOV" type="video/mp4" />
+            Your browser does not support video playback.
+          </video>
+          <div class="video-caption">
+            <h4>${cap.title || "LEGO Build Video"}</h4>
+            ${cap.description ? `<p>${cap.description}</p>` : ""}
+          </div>`;
+        vgrid.appendChild(el);
+      });
     }
+
     document.addEventListener("DOMContentLoaded", init);
   </script>
 </body>

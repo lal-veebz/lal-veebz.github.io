@@ -1,8 +1,44 @@
 {
-  "rubiks": {
-    "IMG_8754": {
-      "title": "Rubik's Cube — 17.7s Record",
-      "description": "Midwest Cubing Association recognized solve. Trains daily to improve speed and consistency."
+  "lego": {
+    "IMG_8737": {
+      "title": "LEGO creation",
+      "description": "Garage lift and flooring created using LEGO."
+    },
+    "IMG_8738": {
+      "title": "LEGO creation",
+      "description": "Garage lift and flooring created using LEGO."
+    },
+    "IMG_8739": {
+      "title": "LEGO creation",
+      "description": "Garage lift and flooring created using LEGO."
+    },
+    "IMG_8741": {
+      "title": "LEGO creation",
+      "description": "Garage lift and flooring created using LEGO."
+    },
+    "IMG_8742": {
+      "title": "LEGO creation",
+      "description": "Internal Engine Model"
+    },
+    "IMG_8755": {
+      "title": "LEGO creation",
+      "description": "LEGO Porsche inspired car creation using random LEGO pieces.lego"
+    },
+    "IMG_8744": {
+      "title": "LEGO Car Demo",
+      "description": "Watch the build come together in this video."
+    },
+    "IMG_8745": {
+      "title": "LEGO Car Demo",
+      "description": "Watch the build come together in this video."
+    },
+    "IMG_8748": {
+      "title": "LEGO Car Demo",
+      "description": "Watch the build come together in this video."
+    },
+    "IMG_8752": {
+      "title": "LEGO Car Demo",
+      "description": "Watch the build come together in this video."
     }
   },
   "sketches": {
@@ -25,6 +61,12 @@
     "IMG_8783": {
       "title": "Artistic Rendering",
       "description": "A freehand rendering exploring line work and artistic expression."
+    }
+  },
+  "rubiks": {
+    "IMG_8754": {
+      "title": "Rubik's Cube — 17.7s Record",
+      "description": "Midwest Cubing Association recognized solve. Trains daily to improve speed and consistency."
     }
   },
   "woodwork": {
@@ -75,32 +117,6 @@
     "IMG_8775": {
       "title": "Craft & Build",
       "description": "Showcasing the quality and craftsmanship of a completed build project."
-    }
-  },
-  "lego": {
-    "IMG_8737": {
-      "title": "LEGO creation",
-      "description": "Garage lift and flooring created using LEGO."
-    },
-    "IMG_8738": {
-      "title": "LEGO creation",
-      "description": "Garage lift and flooring created using LEGO."
-    },
-    "IMG_8739": {
-      "title": "LEGO creation",
-      "description": "Garage lift and flooring created using LEGO."
-    },
-    "IMG_8741": {
-      "title": "LEGO creation",
-      "description": "Garage lift and flooring created using LEGO."
-    },
-    "IMG_8742": {
-      "title": "LEGO creation",
-      "description": "Internal Engine Model"
-    },
-    "IMG_8755": {
-      "title": "LEGO creation",
-      "description": "LEGO Porsche inspired car creation using random LEGO pieces."
     }
   }
 }
