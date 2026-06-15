@@ -1,80 +1,76 @@
 #!/usr/bin/env python3
 """
 update_captions.py
-Reads captions.xlsx and writes captions.json for the Vibhav Lal portfolio website.
+Reads captions.csv and writes captions.json for the Vibhav Lal portfolio website.
 
 Usage:
-    python3 update_captions.py
+    python3 /Users/Shared/veebz/myweb/update_captions.py
 
-The Excel file must have these columns (row 1 = headers):
-    category | filename | title | description
+The CSV file must have these columns (row 1 = headers):
+    category, filename, title, description
 
-After running, open your browser to see the updated hover text.
-If the site is on GitHub Pages, commit and push captions.json.
+Open captions.csv in Numbers, TextEdit, or any text editor to edit it.
+After running, commit and push captions.json to GitHub to update the live site.
 """
 
+import csv
 import json
 import sys
 from pathlib import Path
 
-try:
-    import openpyxl
-except ImportError:
-    print("ERROR: openpyxl not installed. Run: pip3 install openpyxl")
-    sys.exit(1)
-
 BASE_DIR = Path(__file__).parent
-XLSX_FILE = BASE_DIR / "captions.xlsx"
+CSV_FILE  = BASE_DIR / "captions.csv"
 JSON_FILE = BASE_DIR / "captions.json"
 
 VALID_CATEGORIES = {"lego", "sketches", "rubiks", "woodwork"}
 
 
-def xlsx_to_json():
-    if not XLSX_FILE.exists():
-        print(f"ERROR: {XLSX_FILE} not found.")
+def csv_to_json():
+    if not CSV_FILE.exists():
+        print(f"ERROR: {CSV_FILE} not found.")
         sys.exit(1)
 
-    wb = openpyxl.load_workbook(XLSX_FILE)
-    ws = wb.active
-
-    headers = [str(cell.value).strip().lower() if cell.value else "" for cell in ws[1]]
-    required = {"category", "filename", "title", "description"}
-    missing = required - set(headers)
-    if missing:
-        print(f"ERROR: Missing columns in Excel: {missing}")
-        print(f"Found columns: {headers}")
-        sys.exit(1)
-
-    col = {name: headers.index(name) for name in required}
     captions = {cat: {} for cat in VALID_CATEGORIES}
     skipped = 0
 
-    for row_num, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
-        category = str(row[col["category"]] or "").strip().lower()
-        filename = str(row[col["filename"]] or "").strip()
-        title = str(row[col["title"]] or "").strip()
-        description = str(row[col["description"]] or "").strip()
+    with open(CSV_FILE, newline='', encoding='utf-8-sig') as f:
+        reader = csv.DictReader(f)
 
-        if not category and not filename:
-            continue  # blank row
+        # Normalise header names (strip spaces, lowercase)
+        reader.fieldnames = [h.strip().lower() for h in reader.fieldnames]
 
-        if category not in VALID_CATEGORIES:
-            print(f"  Row {row_num}: unknown category '{category}' — skipped")
-            skipped += 1
-            continue
+        required = {"category", "filename", "title", "description"}
+        missing = required - set(reader.fieldnames)
+        if missing:
+            print(f"ERROR: Missing columns in CSV: {missing}")
+            print(f"Found columns: {reader.fieldnames}")
+            sys.exit(1)
 
-        filename = filename.replace(".jpg", "").replace(".JPG", "").replace(".jpeg", "")
-        captions[category][filename] = {"title": title, "description": description}
+        for row_num, row in enumerate(reader, start=2):
+            category    = row.get("category", "").strip().lower()
+            filename    = row.get("filename", "").strip()
+            title       = row.get("title", "").strip()
+            description = row.get("description", "").strip()
 
-    with open(JSON_FILE, "w") as f:
-        json.dump(captions, f, indent=2)
+            if not category and not filename:
+                continue  # blank row
+
+            if category not in VALID_CATEGORIES:
+                print(f"  Row {row_num}: unknown category '{category}' — skipped")
+                skipped += 1
+                continue
+
+            # Accept filenames with or without .jpg extension
+            filename = filename.replace(".jpg", "").replace(".JPG", "").replace(".jpeg", "")
+            captions[category][filename] = {"title": title, "description": description}
+
+    with open(JSON_FILE, "w", encoding="utf-8") as f:
+        json.dump(captions, f, indent=2, ensure_ascii=False)
 
     total = sum(len(v) for v in captions.values())
     print(f"Done. {total} captions written to captions.json ({skipped} rows skipped).")
-    if skipped == 0:
-        print("Next step: commit and push captions.json to GitHub to update the live site.")
+    print("Next: git add captions.json && git commit -m 'update captions' && git push")
 
 
 if __name__ == "__main__":
-    xlsx_to_json()
+    csv_to_json()
