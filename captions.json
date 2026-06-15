@@ -1,4 +1,32 @@
 {
+  "sketches": {
+    "IMG_8406": {
+      "title": "Original Sketch",
+      "description": "Freehand drawing showcasing creative vision and artistic skill."
+    },
+    "IMG_8776": {
+      "title": "Pencil Study",
+      "description": "Detailed pencil sketch exploring form, shading, and composition."
+    },
+    "IMG_8778": {
+      "title": "Creative Illustration",
+      "description": "Original illustration drawn from imagination."
+    },
+    "IMG_8781": {
+      "title": "Sketch Study",
+      "description": "Observational drawing practice capturing detail and perspective."
+    },
+    "IMG_8783": {
+      "title": "Artistic Rendering",
+      "description": "A freehand rendering exploring line work and artistic expression."
+    }
+  },
+  "rubiks": {
+    "IMG_8754": {
+      "title": "Rubik's Cube — 17.7s Record",
+      "description": "17.7s is his timing at the latest Midwest Cubing Association competition. Trains daily to push speed and consistency."
+    }
+  },
   "lego": {
     "IMG_8737": {
       "title": "LEGO creation",
@@ -39,34 +67,6 @@
     "IMG_8752": {
       "title": "LEGO Car Demo",
       "description": "Watch the build come together in this video."
-    }
-  },
-  "sketches": {
-    "IMG_8406": {
-      "title": "Original Sketch",
-      "description": "Freehand drawing showcasing creative vision and artistic skill."
-    },
-    "IMG_8776": {
-      "title": "Pencil Study",
-      "description": "Detailed pencil sketch exploring form, shading, and composition."
-    },
-    "IMG_8778": {
-      "title": "Creative Illustration",
-      "description": "Original illustration drawn from imagination."
-    },
-    "IMG_8781": {
-      "title": "Sketch Study",
-      "description": "Observational drawing practice capturing detail and perspective."
-    },
-    "IMG_8783": {
-      "title": "Artistic Rendering",
-      "description": "A freehand rendering exploring line work and artistic expression."
-    }
-  },
-  "rubiks": {
-    "IMG_8754": {
-      "title": "Rubik's Cube — 17.7s Record",
-      "description": "Midwest Cubing Association recognized solve. Trains daily to improve speed and consistency."
     }
   },
   "woodwork": {
