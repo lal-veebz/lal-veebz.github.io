@@ -82,7 +82,7 @@
         const el = document.createElement("div");
         el.className = "video-item";
         el.innerHTML = `
-          <video controls playsinline preload="metadata">
+          <video controls playsinline preload="none" poster="videos/${CATEGORY}/thumbs/${f}.jpg">
             <source src="videos/${CATEGORY}/${f}.MOV" type="video/quicktime" />
             <source src="videos/${CATEGORY}/${f}.MOV" type="video/mp4" />
             Your browser does not support video playback.
