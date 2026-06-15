@@ -21,12 +21,6 @@
       "description": "A freehand rendering exploring line work and artistic expression."
     }
   },
-  "rubiks": {
-    "IMG_8754": {
-      "title": "Rubik's Cube — 17.7s Record",
-      "description": "17.7 seconds on the 3x3 solve at the latest Midwest Cubing Association competition. Training daily to push speed and consistency."
-    }
-  },
   "lego": {
     "IMG_8737": {
       "title": "LEGO creation",
@@ -76,10 +70,10 @@
     },
     "IMG_8726": {
       "title": "Workshop Build",
-      "description": "Detail shot of a woodworking build — precise cuts and clean joinery."
+      "description": "Detail shot of a woodworking build with precise cuts and clean joinery."
     },
     "IMG_8730": {
-      "title": "Side Table — Build Process",
+      "title": "Side Table Build Process",
       "description": "Designing and assembling the wooden side table with working drawers from scratch."
     },
     "IMG_8734": {
@@ -91,7 +85,7 @@
       "description": "The finished wooden side table with working drawers, built entirely from scratch."
     },
     "IMG_8767": {
-      "title": "Metalworking — Welding Setup",
+      "title": "Metalworking and Welding Setup",
       "description": "Learning safe tool handling and structural assembly during metal fabrication."
     },
     "IMG_8768": {
@@ -112,11 +106,17 @@
     },
     "IMG_8773": {
       "title": "Completed Metal Table",
-      "description": "Finished wall-mountable metal side table — fabricated and welded from raw material."
+      "description": "Finished wall-mountable metal side table, fabricated and welded from raw material."
     },
     "IMG_8775": {
       "title": "Craft & Build",
       "description": "Showcasing the quality and craftsmanship of a completed build project."
+    }
+  },
+  "rubiks": {
+    "IMG_8754": {
+      "title": "Rubik's Cube 17.7s Record",
+      "description": "17.7 seconds on the 3x3 solve at the latest Midwest Cubing Association competition. Training daily to push speed and consistency."
     }
   }
 }
